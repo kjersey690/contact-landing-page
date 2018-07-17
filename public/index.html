@@ -1,0 +1,97 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, inital-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../server.js"></script>
+
+</head>
+<body>
+
+
+<header><!-- 
+Active Navigation -->
+<nav role="navigation" class="navbar transparent navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header" id="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" id="icon-bar"></span>
+        <span class="icon-bar" id="icon-bar"></span>
+        <span class="icon-bar" id="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Our Doctors</a></li>
+        <li><a href="#">Before and After</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+<!-- contact information -->
+<div class="container-flex">
+    <div class="contact">
+          <h2 class="talk">LET'S TALK!</h2>
+          <h6> * = required fields
+          <h6 class="description">If you have any questions please feel free to reach out to a representative</h6>
+          <br />
+    <form class="form" action="/send-email" method="post">
+          <h4 class="name">Name:* </h4>
+    <input id="text" type="text" name="name"><br /><br />
+          <h4 class="email">Email:*</h4>
+    <input id="email" type="email" name="email"><br /><br />
+          <h4 class="help">How Can We Help You:*</h4>
+    <input id="help" type="help" name="help"><br /><br />
+    <input type="submit" value="Send It">
+    </div>
+    
+
+</form>
+<div class="map-container">
+<div class="map" id="map">
+</div>
+
+<!-- <div class="under-map">
+
+<div class="contact-icons">
+<i class="material-icons"></i><br />
+<h2 class="fa fa-twitter" style="text-size: 200px">Linda Stanley</i><br>
+<h2 class="fa fa-phone">555-555-5555</h2>
+<h2 class="fa fa-envelope">Someone@gmail.com</h2>
+
+
+</div> -->
+<!-- Google Maps API -->
+</div> 
+
+</header>
+<script>
+function initMap(){
+	var location = {lat: 39.382017, lng: -74.555795};
+	var map = new google.maps.Map(document.getElementById("map"),
+		{zoom: 15,
+			center: location
+		})
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyAlSj71bgiV2J6YwN_GZY_Eao_tQpX0Yxs&callback=initMap">
+</script>
+</body>
+</html>
+ 
