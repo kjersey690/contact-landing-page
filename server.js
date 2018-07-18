@@ -11,14 +11,16 @@ app.listen(3000);
 console.log("listening on port 3000");
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
-
+app.get("/", (req, res)=>{
+  res.send("hello world");
+})
 app.use(bodyParser.urlencoded({ extended: false }));
 
 smtpTransport = nodemailer.createTransport(smtpTransport({
   service: 'Gmail',
   auth: {
-    user: 'kjersey690@gmail.com',
-    pass: 'Masbtcal4!'
+    user: '',
+    pass: ''
   }
 }));
 app.post('/send-email', function(req, res) {
@@ -43,14 +45,14 @@ app.post('/send-email', function(req, res) {
 
 
 // Google maps api
-function initMap(){
-	var location = {lat: 39.382017, lng: -74.555795};
-	var map = new google.maps.Map(document.getElementById("map"),
-		{zoom: 15,
-			center: location
-		})
-  var marker = new google.maps.Marker({
-    position: location,
-    map: map
-  });
-}
+// function initMap(){
+// 	var location = {lat: 39.382017, lng: -74.555795};
+// 	var map = new google.maps.Map(document.getElementById("map"),
+// 		{zoom: 15,
+// 			center: location
+// 		})
+//   var marker = new google.maps.Marker({
+//     position: location,
+//     map: map
+//   });
+// }

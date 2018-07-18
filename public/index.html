@@ -15,73 +15,351 @@
 
 </head>
 <body>
+<header>
 
+</header>
 
-<header><!-- 
-Active Navigation -->
-<nav role="navigation" class="navbar transparent navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header" id="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar" id="icon-bar"></span>
-        <span class="icon-bar" id="icon-bar"></span>
-        <span class="icon-bar" id="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Our Doctors</a></li>
-        <li><a href="#">Before and After</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-      </ul>
-    </div>
-  </div>
-</nav> 
 
 <!-- contact information -->
 <div class="container-flex">
-    <div class="contact">
-          <h2 class="talk">LET'S TALK!</h2>
-          <h6> * = required fields
-          <h6 class="description">If you have any questions please feel free to reach out to a representative</h6>
-          <br />
-    <form class="form" action="/send-email" method="post">
-          <h4 class="name">Name:* </h4>
-    <input id="text" type="text" name="name"><br /><br />
-          <h4 class="email">Email:*</h4>
-    <input id="email" type="email" name="email"><br /><br />
-          <h4 class="help">How Can We Help You:*</h4>
-    <input id="help" type="help" name="help"><br /><br />
-    <input type="submit" value="Send It">
-    </div>
+    <div class="form-style-8">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" name="field1" placeholder="Full Name" />
+    <input type="email" name="field2" placeholder="Email" />
+    <input type="url" name="field3" placeholder="Website" />
+    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+    <input type="button" value="Send Message" />
+  </form>
+</div>
     
 
 </form>
 <div class="map-container">
-<div class="map" id="map">
+<div id="map">
 </div>
 
-<!-- <div class="under-map">
 
-<div class="contact-icons">
-<i class="material-icons"></i><br />
-<h2 class="fa fa-twitter" style="text-size: 200px">Linda Stanley</i><br>
-<h2 class="fa fa-phone">555-555-5555</h2>
-<h2 class="fa fa-envelope">Someone@gmail.com</h2>
-
-
-</div> -->
 <!-- Google Maps API -->
 </div> 
 
-</header>
 <script>
 function initMap(){
 	var location = {lat: 39.382017, lng: -74.555795};
 	var map = new google.maps.Map(document.getElementById("map"),
 		{zoom: 15,
-			center: location
+			center: location,
+      styles:[
+    {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#0000ff"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ff0000"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000100"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway.controlled_access",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffff00"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway.controlled_access",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#ff0000"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffa91a"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "gamma": 0.55
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "lightness": -100
+            },
+            {
+                "weight": 2.1
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "invert_lightness": true
+            },
+            {
+                "hue": "#ff0000"
+            },
+            {
+                "gamma": 3.02
+            },
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": 40
+            }
+        ]
+    },
+    {
+        "featureType": "poi.attraction",
+        "stylers": [
+            {
+                "saturation": 100
+            },
+            {
+                "hue": "#ff00ee"
+            },
+            {
+                "lightness": -13
+            }
+        ]
+    },
+    {
+        "featureType": "poi.government",
+        "stylers": [
+            {
+                "saturation": 100
+            },
+            {
+                "hue": "#eeff00"
+            },
+            {
+                "gamma": 0.67
+            },
+            {
+                "lightness": -26
+            }
+        ]
+    },
+    {
+        "featureType": "poi.medical",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "hue": "#ff0000"
+            },
+            {
+                "saturation": 100
+            },
+            {
+                "lightness": -37
+            }
+        ]
+    },
+    {
+        "featureType": "poi.medical",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#ff0000"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.school",
+        "stylers": [
+            {
+                "hue": "#ff7700"
+            },
+            {
+                "saturation": 97
+            },
+            {
+                "lightness": -41
+            }
+        ]
+    },
+    {
+        "featureType": "poi.sports_complex",
+        "stylers": [
+            {
+                "saturation": 100
+            },
+            {
+                "hue": "#00ffb3"
+            },
+            {
+                "lightness": -71
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "stylers": [
+            {
+                "saturation": 84
+            },
+            {
+                "lightness": -57
+            },
+            {
+                "hue": "#a1ff00"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.station.airport",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "gamma": 0.11
+            }
+        ]
+    },
+    {
+        "featureType": "transit.station",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#ffc35e"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": -100
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "stylers": [
+            {
+                "saturation": 100
+            },
+            {
+                "gamma": 0.35
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi.business",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "gamma": 0.35
+            }
+        ]
+    },
+    {
+        "featureType": "poi.business",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#69ffff"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.place_of_worship",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#c3ffc3"
+            }
+        ]
+    }
+]
 		})
   var marker = new google.maps.Marker({
     position: location,

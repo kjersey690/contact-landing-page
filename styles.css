@@ -1,7 +1,7 @@
 header{
 	/*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("pexels-photo-1059114.jpeg");*/
 	/*height: 100vh;*/
-	height: 700px;
+	height: 20vh;
 	width: 100%;
 	background-size: cover;
 	background-position: center;
@@ -33,16 +33,7 @@ header{
 	color: black;
 }
 
-.contact{
-	display: flex;
-  flex-direction: column;
-	justify-content: space-around;
-	border-radius: 5px;
-  background-color: white;
-	margin: 60px;
-  padding: 30px;
-  height: 90vh;
-}
+
 
 .contact:after{
   content: "";
@@ -57,14 +48,19 @@ header{
 }
 
 .container-flex{
+  padding: 30px;
+  margin: 30px;
 	display: flex;
-  flex-direction: row;
-  align-content: space-evenly;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  align-content: center;
+  width: 100vh;
+  justify-content: center;
 	}
 .map-div{
-	height: 200px;
-	width: 300px;
-	float: right;
+	
+	width: 50vh;
+	/*float: right;*/
 	border: solid;
 	margin: 50px;
 
@@ -117,14 +113,14 @@ input[type="submit"]{
    }*/
 
    #map{
-   	padding: 10px;
-   	margin: 10px;
-	height: 300px;
-	width: 80vh;
-  border-radius: 5px;
-  border-spacing: 10px;
-  border: white solid 10px;
-  
+   
+   	/*margin: 10px;*/
+	height: 200vh;
+	width: 100vh;
+  /*border-radius: 5px;
+  border-spacing: 10px;*/
+  /*border: white solid 10px;
+  */
    }
    #navbar-header{
    	background-color: none;
@@ -188,12 +184,12 @@ input[type="submit"]{
    }
 
    .map-container{
-    display: flex;
-    width: 45%;
+    order: 1;
+    width: 75%;
     height: 100vh;
-    flex-direction: column;
-   /* justify-content: space-evenly;*/
-    align-content: space-around;
+    
+   
+    
     
    }
 
@@ -212,4 +208,79 @@ input[type="submit"]{
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     
    }*/
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+.form-style-8{
+    font-family: 'Open Sans Condensed', arial, sans;
+    width: 50vh;
+    padding: 10px;
+    background: #FFFFFF;
+  float: right;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+    
+}
+.form-style-8 h2{
+    background: #4D4D4D;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #797979;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    
+}
+.form-style-8 input[type="text"],
+.form-style-8 input[type="date"],
+.form-style-8 input[type="datetime"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="search"],
+.form-style-8 input[type="time"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
+.form-style-8 textarea,
+.form-style-8 select
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+.form-style-8 textarea{
+    resize:none;
+    overflow: hidden;
+}
+.form-style-8 input[type="button"],
+.form-style-8 input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.form-style-8 input[type="button"]:hover,
+.form-style-8 input[type="submit"]:hover {
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+}
+
    
