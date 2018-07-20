@@ -1,375 +1,51 @@
-<DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, inital-scale=1">
-	<meta charset="utf-8">
-	<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="../server.js"></script>
-
+<meta name="viewport" content='width-device-width, initial-scale=1.0'>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="server.js"></script>
+<title>Web design</title>
 </head>
 <body>
-<header>
-
-</header>
-
-
-<!-- contact information -->
-<div class="container-flex">
-    <div class="form-style-8">
-  <h2>Contact Us</h2>
-  <form>
-    <input type="text" name="field1" placeholder="Full Name" />
-    <input type="email" name="field2" placeholder="Email" />
-    <input type="url" name="field3" placeholder="Website" />
-    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
-    <input type="button" value="Send Message" />
-  </form>
-</div>
-    
-
-</form>
-<div class="map-container">
-<div id="map">
-</div>
-
-
-<!-- Google Maps API -->
-</div> 
-
-<script>
-function initMap(){
-	var location = {lat: 39.382017, lng: -74.555795};
-	var map = new google.maps.Map(document.getElementById("map"),
-		{zoom: 15,
-			center: location,
-      styles:[
-    {
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#000000"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#0000ff"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#000100"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway.controlled_access",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffff00"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway.controlled_access",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffa91a"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#000000"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.natural",
-        "stylers": [
-            {
-                "saturation": 36
-            },
-            {
-                "gamma": 0.55
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#000000"
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "lightness": -100
-            },
-            {
-                "weight": 2.1
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "invert_lightness": true
-            },
-            {
-                "hue": "#ff0000"
-            },
-            {
-                "gamma": 3.02
-            },
-            {
-                "lightness": 20
-            },
-            {
-                "saturation": 40
-            }
-        ]
-    },
-    {
-        "featureType": "poi.attraction",
-        "stylers": [
-            {
-                "saturation": 100
-            },
-            {
-                "hue": "#ff00ee"
-            },
-            {
-                "lightness": -13
-            }
-        ]
-    },
-    {
-        "featureType": "poi.government",
-        "stylers": [
-            {
-                "saturation": 100
-            },
-            {
-                "hue": "#eeff00"
-            },
-            {
-                "gamma": 0.67
-            },
-            {
-                "lightness": -26
-            }
-        ]
-    },
-    {
-        "featureType": "poi.medical",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "hue": "#ff0000"
-            },
-            {
-                "saturation": 100
-            },
-            {
-                "lightness": -37
-            }
-        ]
-    },
-    {
-        "featureType": "poi.medical",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.school",
-        "stylers": [
-            {
-                "hue": "#ff7700"
-            },
-            {
-                "saturation": 97
-            },
-            {
-                "lightness": -41
-            }
-        ]
-    },
-    {
-        "featureType": "poi.sports_complex",
-        "stylers": [
-            {
-                "saturation": 100
-            },
-            {
-                "hue": "#00ffb3"
-            },
-            {
-                "lightness": -71
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "stylers": [
-            {
-                "saturation": 84
-            },
-            {
-                "lightness": -57
-            },
-            {
-                "hue": "#a1ff00"
-            }
-        ]
-    },
-    {
-        "featureType": "transit.station.airport",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "gamma": 0.11
-            }
-        ]
-    },
-    {
-        "featureType": "transit.station",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffc35e"
-            }
-        ]
-    },
-    {
-        "featureType": "transit.line",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "lightness": -100
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "stylers": [
-            {
-                "saturation": 100
-            },
-            {
-                "gamma": 0.35
-            },
-            {
-                "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "gamma": 0.35
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#69ffff"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.place_of_worship",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#c3ffc3"
-            }
-        ]
-    }
-]
-		})
-  var marker = new google.maps.Marker({
-    position: location,
-    map: map
-  });
-}
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=
-AIzaSyAlSj71bgiV2J6YwN_GZY_Eao_tQpX0Yxs&callback=initMap">
-</script>
+  <div class="container">
+    <h1 class="brand">Example web design</h1>
+    <div class="wrapper">
+        <div class="company-info">
+            <h3>Example Web Design</h3>
+                <ul>
+                    <li>44 Something St.</li>
+                    <li>(333)-444-5555</li>
+                    <li>Test@example.com</li>
+            </ul>
+        </div> 
+        <div class="contact">
+            <h3>Email Us</h3>
+            <form action="/send-email" method="post">
+            <p>
+                <label>Name</label>
+                <input type="text" name="name" />
+            </p>
+            <p>
+                <label>Company</label>
+                <input type="text" name="company" />
+            </p>
+            <p>
+                <label>Email Address</label>
+                <input type="email"  name="email" />
+            </p>
+            <p>
+                <label>Phone Number</label>
+                <input type="text" name="phone" />
+            </p>
+            <p class="full">
+                <label>Message</label>
+                <textarea name="message" rows="5"></textarea>
+            <p class="full">
+            <button>Submit</button>
+            </p>
+            </h3>
+        </form>
+       </div>
+      </div>
 </body>
 </html>
- 
